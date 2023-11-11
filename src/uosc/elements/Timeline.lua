@@ -268,7 +268,7 @@ function Timeline:render()
 			if options.timeline_cache then
 				local ax = range[1] < 0.5 and bax or math.floor(t2x(range[1]))
 				local bx = range[2] > state.duration - 0.5 and bbx or math.ceil(t2x(range[2]))
-				opts.color, opts.opacity, opts.anchor_x = 'ffffff', 0.4 - (0.2 * visibility), bax
+				opts.color, opts.opacity, opts.anchor_x = 'ffffff', 0.2 - (0.1 * visibility), bax
 				ass:texture(ax, fay, bx, fby, texture_char, opts)
 				opts.color, opts.opacity, opts.anchor_x = '000000', 0.6 - (0.2 * visibility), bax + offset
 				ass:texture(ax, fay, bx, fby, texture_char, opts)
